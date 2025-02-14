@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walls: {fileID: 4903275961298092083, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
+  interval: 3
 --- !u!4 &213625629
 Transform:
   m_ObjectHideFlags: 0
@@ -559,7 +560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5309417158055380844, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.64
+      value: -5.44
       objectReference: {fileID: 0}
     - target: {fileID: 5309417158055380844, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -597,6 +598,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8280361381678519256, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
+      propertyPath: walls
+      value: 
+      objectReference: {fileID: 4903275961298092083, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

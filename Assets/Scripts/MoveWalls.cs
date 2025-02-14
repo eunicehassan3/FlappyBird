@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveWalls : MonoBehaviour
 {
+    public GameObject walls;
     public float wallspeed = 2.0f;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,6 +17,10 @@ public class MoveWalls : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + new Vector3(-0.5f,0f) * Time.deltaTime * wallspeed;
+
+        if(transform.position.x <= -5.44f){
+            GameObject.Destroy(walls);
+        }
 
         // if transform.position = 
         
