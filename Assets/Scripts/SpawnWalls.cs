@@ -12,6 +12,7 @@ public class SpawnWalls : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawn();
         // coroutine = WaitAndPrint(2.0f);
         // StartCoroutine(coroutine);
          
