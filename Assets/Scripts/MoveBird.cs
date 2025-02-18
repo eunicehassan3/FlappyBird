@@ -37,7 +37,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         if(collided == "Wall"){
             collide = true;
-            Audio
+            src.clip = fail;
+            src.Play();
             // SceneManager.LoadScene("GameOver");
             Debug.Log("Game Over");
         }

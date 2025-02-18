@@ -488,6 +488,7 @@ MonoBehaviour:
   bird: {fileID: 604645910}
   src: {fileID: 604645911}
   bounce: {fileID: 8300000, guid: bf360521c74554e959735a3c5c44bb48, type: 3}
+  fail: {fileID: 8300000, guid: 67708a0e074d04135bbd071adb900681, type: 3}
   collide: 0
 --- !u!50 &604645910
 Rigidbody2D:
@@ -526,8 +527,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bf360521c74554e959735a3c5c44bb48, type: 3}
-  m_Resource: {fileID: 8300000, guid: bf360521c74554e959735a3c5c44bb48, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.464
   m_Pitch: 1
@@ -921,10 +922,6 @@ PrefabInstance:
     - target: {fileID: 4903275961298092083, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
       propertyPath: m_Name
       value: Square
-      objectReference: {fileID: 0}
-    - target: {fileID: 5219127500967605034, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5309417158055380844, guid: b5bdbf2ebaaf445639f59296e7dbc81a, type: 3}
       propertyPath: m_LocalPosition.x
