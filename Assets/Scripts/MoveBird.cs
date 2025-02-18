@@ -4,10 +4,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     public float velocity = 3.0f;
     public Rigidbody2D bird; 
+    public AudioSource src;
+    public AudioClip bounce;
+    public AudioClip fail;
+    public bool collide;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         bird = GetComponent<Rigidbody2D>();
+        collide = false;
     }
 
     // Update is called once per frame
@@ -18,7 +23,23 @@ public class NewMonoBehaviourScript : MonoBehaviour
  
             // bird.AddForce(Vector2.up * 30f) ;
             bird.linearVelocity = Vector2.up * velocity;
+            src.clip = bounce;
+            src.Play();
     
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("you hit something");
+        collide = true;
+        string collided = collision.gameObject.tag;
+
+        if(collided == "Wall"){
+            collide = true;
+            Audio
+            // SceneManager.LoadScene("GameOver");
+            Debug.Log("Game Over");
         }
     }
 }
