@@ -9,6 +9,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public AudioClip fail;
     public bool collide;
     public ParticleSystem crashParticle;
+    public ParticleSystem boostParticle;
+    public float forwardSpeed = 10.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +28,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
             bird.linearVelocity = Vector2.up * velocity;
             src.clip = bounce;
             src.Play();
+    
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            // bird.AddForce(transform.forward, ForceMode2D.Impulse);
+            transform.position += transform.forward * forwardSpeed * Time.deltaTime;
+            bird.linearVelocity += Vector2.right * forwardSpeed; 
+            boostParticle = Instantiate(boostParticle,transform.position, Quaternion.identity);
+            
     
         }
     }
