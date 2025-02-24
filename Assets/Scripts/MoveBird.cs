@@ -8,6 +8,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public AudioClip bounce;
     public AudioClip fail;
     public bool collide;
+    public ParticleSystem crashParticle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,6 +39,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if(collided == "Wall"){
             collide = true;
             src.clip = fail;
+            crashParticle = Instantiate(crashParticle,transform.position, Quaternion.identity);
+            crashParticle.Play();
             src.Play();
             // SceneManager.LoadScene("GameOver");
             Debug.Log("Game Over");
