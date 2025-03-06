@@ -11,11 +11,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public ParticleSystem crashParticle;
     public ParticleSystem boostParticle;
     public float forwardSpeed = 10.0f;
+
+    private Animation animation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         bird = GetComponent<Rigidbody2D>();
         collide = false;
+        animation = GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             // bird.AddForce(Vector2.up * 30f) ;
             bird.linearVelocity = Vector2.up * velocity;
             src.clip = bounce;
+           
             src.Play();
     
         }
