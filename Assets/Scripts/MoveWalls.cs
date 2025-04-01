@@ -18,7 +18,7 @@ public class MoveWalls : MonoBehaviour
     {
         transform.position = transform.position + new Vector3(-0.5f,0f) * Time.deltaTime * wallspeed;
 
-        if(transform.position.x <= -5.44f){
+        if(transform.position.x <= -10.0f){
             GameObject.Destroy(walls);
         }
 

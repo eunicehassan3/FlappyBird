@@ -21,13 +21,17 @@ public class SpawnWalls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Spawntimer();
+    }
+
+    void Spawntimer(){
+        // interval = Random.Range(1.5f,2f);
         timer += Time.deltaTime;
         if(timer >= interval){
             spawn();
             timer = 0.0f;
         }
     }
-
 
     float getRandomPosition(){
         // return Random.Range(2.37f,4.53f);

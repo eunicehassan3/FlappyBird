@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public ParticleSystem crashParticle;
     public ParticleSystem boostParticle;
     public float forwardSpeed = 10.0f;
+    public static int score = 0;
 
     private Animation animation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +26,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        
         if(Input.GetMouseButtonDown(0)){
+            score += 20;
             // bird.linearVelocity = Vector2.zero;
  
             // bird.AddForce(Vector2.up * 30f) ;
@@ -41,8 +45,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
             bird.linearVelocity += Vector2.right * forwardSpeed; 
             boostParticle = Instantiate(boostParticle,transform.position, Quaternion.identity);
             
-    
         }
+
+       
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -61,4 +66,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
             Debug.Log("Game Over");
         }
     }
+
+
+    
+    
 }
