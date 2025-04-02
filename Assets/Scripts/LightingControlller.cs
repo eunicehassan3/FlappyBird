@@ -16,10 +16,14 @@ public class LightingControlller : MonoBehaviour
     void Update()
     {
         score = NewMonoBehaviourScript.score;
-        if(score > 200){
+        if(score > 1000 && score <= 2000){
             Light2D mainLight = gameObject.GetComponent<Light2D>();
             // mainLight.color = new Color(0,0,0);
             birdSpotLight.SetActive(true);
+        }
+
+        else{
+            birdSpotLight.SetActive(false);
         }
     }
 }

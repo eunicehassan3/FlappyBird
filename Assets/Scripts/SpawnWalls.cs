@@ -35,7 +35,7 @@ public class SpawnWalls : MonoBehaviour
 
     float getRandomPosition(){
         // return Random.Range(2.37f,4.53f);
-       return Random.Range(2f,5f);
+       return Random.Range(-10f,-5f);
     }
 
     // private IEnumerator WaitAndPrint(float waitTime)
@@ -45,7 +45,7 @@ public class SpawnWalls : MonoBehaviour
     // }
 
     void spawn(){
-        Vector3 PositionNew =  new Vector3(transform.position.x, getRandomPosition(),transform.position.z);
+        Vector3 PositionNew =  new Vector3(transform.position.x + 10, getRandomPosition(),transform.position.z);
         Instantiate(walls,PositionNew, transform.rotation);
 
         
